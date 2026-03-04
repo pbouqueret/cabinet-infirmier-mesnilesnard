@@ -1,0 +1,33 @@
+# Fichiers système et de l'OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Fichiers et dossiers d'éditeurs de code/IDE
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Dossiers d'agents IA (si générés localement)
+.claude/
+.gemini/
+
+# Dépendances Node.js (au cas où vous ajouteriez des outils de build plus tard)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Fichiers de log généraux
+*.log
+logs/
+
+# Ressources essentielles (HTML, CSS, JS, images) sont par défaut INCLUSES.

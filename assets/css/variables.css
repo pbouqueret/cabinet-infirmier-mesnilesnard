@@ -1,0 +1,131 @@
+/* =========================================
+   VARIABLES CSS - Cabinet Infirmier Qual'Idel
+   ========================================= */
+
+:root {
+  /* === COULEURS PRINCIPALES === */
+  --color-primary: #1B7A99;        /* Bleu canard Qual'Idel */
+  --color-primary-light: #2A8FB0;  /* Bleu canard clair */
+  --color-primary-dark: #14657E;   /* Bleu canard foncé */
+
+  --color-secondary: #E91E8C;      /* Rose Qual'Idel */
+  --color-secondary-light: #F03AA1; /* Rose clair */
+  --color-secondary-dark: #C71876;  /* Rose foncé */
+
+  /* === COULEURS NEUTRES === */
+  --color-neutral-light: #F8F9FA;  /* Fond clair */
+  --color-neutral-medium: #E9ECEF; /* Gris clair */
+  --color-neutral-dark: #2C3E50;   /* Gris foncé */
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+
+  /* === COULEURS DE TEXTE === */
+  --color-text-primary: #333333;
+  --color-text-secondary: #6C757D;
+  --color-text-light: #FFFFFF;
+
+  /* === COULEURS D'ÉTAT === */
+  --color-success: #28A745;
+  --color-error: #DC3545;
+  --color-warning: #FFC107;
+  --color-info: #17A2B8;
+
+  /* === TYPOGRAPHIE === */
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Tailles de police */
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-md: 1.125rem;   /* 18px */
+  --font-size-lg: 1.25rem;    /* 20px */
+  --font-size-xl: 1.5rem;     /* 24px */
+  --font-size-2xl: 2rem;      /* 32px */
+  --font-size-3xl: 2.5rem;    /* 40px */
+  --font-size-4xl: 3rem;      /* 48px */
+
+  /* Poids de police */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Hauteur de ligne */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.8;
+
+  /* === ESPACEMENTS === */
+  --spacing-xs: 0.25rem;   /* 4px */
+  --spacing-sm: 0.5rem;    /* 8px */
+  --spacing-md: 1rem;      /* 16px */
+  --spacing-lg: 1.5rem;    /* 24px */
+  --spacing-xl: 2rem;      /* 32px */
+  --spacing-2xl: 3rem;     /* 48px */
+  --spacing-3xl: 4rem;     /* 64px */
+  --spacing-4xl: 6rem;     /* 96px */
+
+  /* === BORDURES === */
+  --border-radius-sm: 0.25rem;  /* 4px */
+  --border-radius-md: 0.5rem;   /* 8px */
+  --border-radius-lg: 1rem;     /* 16px */
+  --border-radius-xl: 1.5rem;   /* 24px */
+  --border-radius-full: 9999px; /* Cercle complet */
+
+  --border-width-thin: 1px;
+  --border-width-medium: 2px;
+  --border-width-thick: 4px;
+
+  /* === OMBRES === */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+  /* === TRANSITIONS === */
+  --transition-fast: 150ms ease-in-out;
+  --transition-base: 300ms ease-in-out;
+  --transition-slow: 500ms ease-in-out;
+
+  /* === Z-INDEX === */
+  --z-index-dropdown: 1000;
+  --z-index-sticky: 1020;
+  --z-index-fixed: 1030;
+  --z-index-modal-backdrop: 1040;
+  --z-index-modal: 1050;
+  --z-index-popover: 1060;
+  --z-index-tooltip: 1070;
+
+  /* === LARGEURS MAXIMALES === */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1536px;
+
+  /* === BREAKPOINTS (pour référence JS) === */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* === HEADER === */
+  --header-height: 80px;
+  --header-height-mobile: 70px;
+}
+
+/* === MODE SOMBRE (BONUS) === */
+@media (prefers-color-scheme: dark) {
+  :root.dark-mode {
+    --color-neutral-light: #1A202C;
+    --color-neutral-medium: #2D3748;
+    --color-neutral-dark: #E2E8F0;
+    --color-white: #1A202C;
+    --color-text-primary: #E2E8F0;
+    --color-text-secondary: #A0AEC0;
+  }
+}

@@ -1,0 +1,6 @@
+# Fichier robots.txt temporaire pour la phase de test privé sur Vercel
+# Ce site (Cabinet infirmier du Mesnil-Esnard) est en cours de développement
+# L'indexation par les moteurs de recherche est bloquée
+
+User-agent: *
+Disallow: /

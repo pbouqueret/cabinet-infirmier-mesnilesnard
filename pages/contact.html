@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contactez le cabinet infirmier Qual'Idel : formulaire de contact, téléphone, adresse et plan d'accès au Mesnil-Esnard.">
+  <meta name="keywords" content="contact, rendez-vous, cabinet infirmier, Le Mesnil-Esnard, téléphone, adresse">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact - Cabinet Infirmier Qual'Idel">
+  <meta property="og:description" content="Prenez rendez-vous ou contactez-nous pour vos soins infirmiers.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/variables.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+
+  <title>Contact - Cabinet Infirmier Qual'Idel</title>
+</head>
+<body>
+  <!-- LOADER -->
+  <div class="page-loader">
+    <div class="loader-spinner"></div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-container">
+      <div class="header-logo">
+        <div>
+          <a href="../index.html" style="text-decoration: none; color: inherit;">
+            <div class="logo-text">Cabinet Infirmier</div>
+            <div class="logo-subtitle">Delphine Bouqueret & Anne Charlotte Burel</div>
+          </a>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <ul class="nav-menu">
+          <li><a href="../index.html" class="nav-link">Accueil</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="cabinet.html" class="nav-link">Le Cabinet</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" style="min-height: 60vh;">
+    <div class="container">
+      <div class="hero-content" style="grid-template-columns: 1fr; text-align: center;">
+        <div class="hero-text">
+          <h1>Nous contacter</h1>
+          <p class="hero-subtitle">
+            Par téléphone, formulaire ou directement au cabinet
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION COORDONNÉES -->
+  <section class="section">
+    <div class="container">
+      <div class="info-grid">
+        <div class="info-item">
+          <div class="info-icon">📞</div>
+          <h3 class="info-title">Téléphone</h3>
+          <p class="info-text">
+            <a href="tel:0235234219" class="phone-number" style="font-size: var(--font-size-xl); font-weight: var(--font-weight-semibold); color: var(--color-primary);">
+              02 35 23 42 19
+            </a>
+          </p>
+          <p class="info-text" style="margin-top: var(--spacing-md);">
+            Disponible 7j/7<br>
+            de 6h à 20h
+          </p>
+          <a href="tel:0235234219" class="btn btn-primary" style="margin-top: var(--spacing-md);">
+            Appeler maintenant
+          </a>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">📍</div>
+          <h3 class="info-title">Adresse</h3>
+          <p class="info-text">
+            <strong>Cabinet Qual'Idel</strong><br>
+            61 route Paris<br>
+            76240 Le Mesnil-Esnard<br>
+            France
+          </p>
+          <a href="#map" class="info-link" style="margin-top: var(--spacing-md);">
+            Voir la carte →
+          </a>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">🕐</div>
+          <h3 class="info-title">Horaires</h3>
+          <p class="info-text">
+            <strong>Lundi - Dimanche</strong><br>
+            06:00 - 20:00
+          </p>
+          <p class="info-text" style="margin-top: var(--spacing-md); font-size: var(--font-size-sm); color: var(--color-secondary); font-weight: var(--font-weight-semibold);">
+            Soins au cabinet sur rendez-vous<br>
+            Soins à domicile selon disponibilités
+          </p>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">💳</div>
+          <h3 class="info-title">Paiement</h3>
+          <p class="info-text">
+            • Espèces<br>
+            • Chèque<br>
+            • Tiers-payant accepté
+          </p>
+          <p class="info-text" style="margin-top: var(--spacing-md);">
+            <strong>Secteur 1</strong><br>
+            Conventionné Assurance Maladie
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION FORMULAIRE DE CONTACT -->
+  <section class="section section-gray">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Envoyez-nous un message</h2>
+        <p class="section-subtitle">
+          Remplissez le formulaire ci-dessous, nous vous répondrons dans les plus brefs délais
+        </p>
+      </div>
+
+      <div style="max-width: 800px; margin: 0 auto;">
+        <div class="card">
+          <form id="contact-form" novalidate>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-lg); margin-bottom: var(--spacing-lg);">
+              <div class="form-group">
+                <label for="nom" class="form-label">Nom *</label>
+                <input
+                  type="text"
+                  id="nom"
+                  name="nom"
+                  class="form-input"
+                  placeholder="Votre nom"
+                  required
+                >
+                <span class="form-error">Veuillez entrer votre nom</span>
+              </div>
+
+              <div class="form-group">
+                <label for="prenom" class="form-label">Prénom *</label>
+                <input
+                  type="text"
+                  id="prenom"
+                  name="prenom"
+                  class="form-input"
+                  placeholder="Votre prénom"
+                  required
+                >
+                <span class="form-error">Veuillez entrer votre prénom</span>
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-lg); margin-bottom: var(--spacing-lg);">
+              <div class="form-group">
+                <label for="email" class="form-label">Email *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="votre.email@exemple.fr"
+                  required
+                >
+                <span class="form-error">Veuillez entrer une adresse email valide</span>
+              </div>
+
+              <div class="form-group">
+                <label for="telephone" class="form-label">Téléphone *</label>
+                <input
+                  type="tel"
+                  id="telephone"
+                  name="telephone"
+                  class="form-input"
+                  placeholder="02 35 23 42 19"
+                  required
+                >
+                <span class="form-error">Veuillez entrer un numéro de téléphone valide</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="sujet" class="form-label">Sujet *</label>
+              <select id="sujet" name="sujet" class="form-select" required>
+                <option value="">-- Sélectionnez un sujet --</option>
+                <option value="rdv-cabinet">Demande de rendez-vous au cabinet</option>
+                <option value="rdv-domicile">Demande de soins à domicile</option>
+                <option value="renseignement">Demande de renseignement</option>
+                <option value="urgence">Urgence (appelez plutôt le 02 35 23 42 19)</option>
+                <option value="autre">Autre</option>
+              </select>
+              <span class="form-error">Veuillez sélectionner un sujet</span>
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Message *</label>
+              <textarea
+                id="message"
+                name="message"
+                class="form-textarea"
+                placeholder="Décrivez votre demande..."
+                rows="6"
+                maxlength="1000"
+                required
+              ></textarea>
+              <span class="form-error">Veuillez entrer votre message (minimum 10 caractères)</span>
+            </div>
+
+            <div style="margin-bottom: var(--spacing-lg); padding: var(--spacing-md); background-color: var(--color-neutral-light); border-radius: var(--border-radius-md); font-size: var(--font-size-sm); color: var(--color-text-secondary);">
+              <strong>⚠️ En cas d'urgence</strong>, veuillez nous appeler directement au
+              <a href="tel:0235234219" style="font-weight: var(--font-weight-semibold); color: var(--color-primary);">02 35 23 42 19</a>
+              plutôt que d'utiliser ce formulaire.
+            </div>
+
+            <div style="margin-bottom: var(--spacing-lg); font-size: var(--font-size-sm); color: var(--color-text-secondary);">
+              Les champs marqués d'un astérisque (*) sont obligatoires.
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">
+              <span class="btn-icon">📤</span>
+              Envoyer le message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION CARTE -->
+  <section class="section" id="map">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Plan d'accès</h2>
+        <p class="section-subtitle">
+          61 route Paris, 76240 Le Mesnil-Esnard
+        </p>
+      </div>
+
+      <div class="map-container">
+        <!-- Carte OpenStreetMap interactive -->
+        <iframe
+          width="100%"
+          height="100%"
+          style="border:0; border-radius: var(--border-radius-lg);"
+          loading="lazy"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=1.0776%2C49.4108%2C1.1076%2C49.4308&layer=mapnik&marker=49.4208%2C1.0926">
+        </iframe>
+      </div>
+
+      <!-- Informations d'accès -->
+      <div style="margin-top: var(--spacing-2xl); max-width: 900px; margin-left: auto; margin-right: auto;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xl);">
+          <div class="card">
+            <h3 style="font-size: var(--font-size-lg); margin-bottom: var(--spacing-md); color: var(--color-primary);">
+              🚗 En voiture
+            </h3>
+            <p style="color: var(--color-text-secondary); line-height: var(--line-height-relaxed);">
+              Le cabinet est facilement accessible depuis Rouen par la D6014.
+              Stationnement disponible à proximité.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 style="font-size: var(--font-size-lg); margin-bottom: var(--spacing-md); color: var(--color-primary);">
+              🚌 En transports en commun
+            </h3>
+            <p style="color: var(--color-text-secondary); line-height: var(--line-height-relaxed);">
+              Accessible par les lignes de bus desservant Le Mesnil-Esnard.
+              Arrêt "Mairie du Mesnil-Esnard" à proximité.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION FAQ RAPIDE -->
+  <section class="section section-gray">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Questions fréquentes</h2>
+      </div>
+
+      <div style="max-width: 900px; margin: 0 auto;">
+        <div class="card" style="margin-bottom: var(--spacing-lg);">
+          <h3 style="font-size: var(--font-size-lg); margin-bottom: var(--spacing-sm); color: var(--color-primary);">
+            ❓ Comment prendre rendez-vous ?
+          </h3>
+          <p style="color: var(--color-text-secondary); line-height: var(--line-height-relaxed);">
+            Vous pouvez nous appeler directement au <a href="tel:0235234219" style="font-weight: var(--font-weight-semibold);">02 35 23 42 19</a>
+            ou utiliser le formulaire de contact ci-dessus. Pour les soins à domicile, précisez votre adresse et vos disponibilités.
+          </p>
+        </div>
+
+        <div class="card" style="margin-bottom: var(--spacing-lg);">
+          <h3 style="font-size: var(--font-size-lg); margin-bottom: var(--spacing-sm); color: var(--color-primary);">
+            ❓ Intervenez-vous en urgence ?
+          </h3>
+          <p style="color: var(--color-text-secondary); line-height: var(--line-height-relaxed);">
+            Nous faisons notre possible pour répondre aux situations urgentes. Appelez-nous au
+            <a href="tel:0235234219" style="font-weight: var(--font-weight-semibold);">02 35 23 42 19</a>
+            et nous évaluerons ensemble la situation et les possibilités d'intervention rapide.
+          </p>
+        </div>
+
+        <div class="card" style="margin-bottom: var(--spacing-lg);">
+          <h3 style="font-size: var(--font-size-lg); margin-bottom: var(--spacing-sm); color: var(--color-primary);">
+            ❓ Quelle est votre zone d'intervention à domicile ?
+          </h3>
+          <p style="color: var(--color-text-secondary); line-height: var(--line-height-relaxed);">
+            Nous intervenons principalement sur Le Mesnil-Esnard et les communes limitrophes (Bonsecours, Franqueville-Saint-Pierre, Amfreville-la-Mi-Voie, Belbeuf...).
+            Pour toute demande concernant une autre zone, contactez-nous pour vérifier les possibilités.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 style="font-size: var(--font-size-lg); margin-bottom: var(--spacing-sm); color: var(--color-primary);">
+            ❓ Faut-il une ordonnance ?
+          </h3>
+          <p style="color: var(--color-text-secondary); line-height: var(--line-height-relaxed);">
+            Oui, pour la plupart des soins infirmiers, une ordonnance médicale est nécessaire pour le remboursement par l'Assurance Maladie.
+            Certains soins de prévention peuvent être réalisés sans ordonnance. N'hésitez pas à nous contacter pour plus d'informations.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Cabinet Qual'Idel</h3>
+          <p>
+            Infirmière libérale diplômée d'État<br>
+            Delphine Bouqueret & Anne Charlotte Burel<br>
+            61 route Paris<br>
+            76240 Le Mesnil-Esnard
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Liens rapides</h3>
+          <ul class="footer-links">
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="cabinet.html">Le Cabinet</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Horaires</h3>
+          <p>
+            Lundi - Dimanche<br>
+            06:00 - 20:00<br>
+            7 jours sur 7
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p>
+            <strong>Téléphone :</strong><br>
+            <a href="tel:0235234219" class="phone-number">02 35 23 42 19</a>
+          </p>
+          <p style="margin-top: var(--spacing-md);">
+            <span class="badge-qualidel" style="display: inline-flex;">✓ Labellisé Qual'Idel</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Cabinet Infirmier Qual'Idel - Delphine Bouqueret & Anne Charlotte Burel. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOUTON RETOUR EN HAUT -->
+  <button class="back-to-top" aria-label="Retour en haut">↑</button>
+
+  <!-- SCRIPTS -->
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/form.js"></script>
+</body>
+</html>
