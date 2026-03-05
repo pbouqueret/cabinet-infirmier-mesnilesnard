@@ -1,10 +1,10 @@
-# Site Web Cabinet Infirmier Qual'Idel
+# Site Web Infirmières Libérales Le Mesnil-Esnard
 
-Site web professionnel pour le cabinet infirmier Qual'Idel - Delphine Bouqueret & Anne Charlotte Burel, infirmières libérales au Mesnil-Esnard (76240), près de Rouen.
+Site web professionnel pour le cabinet d'infirmières libérales - Delphine Bouqueret & Anne Charlotte Burel, situé au Mesnil-Esnard (76240), près de Rouen.
 
 ## 📋 Description
 
-Site moderne, responsive et performant présentant les services infirmiers proposés au cabinet et à domicile. Le cabinet est labellisé **Qual'Idel**, garantissant une démarche qualité rigoureuse.
+Site moderne, responsive et performant présentant les services infirmiers proposés au cabinet et à domicile. Le cabinet est certifié par le label qualité **Qual'Idel**.
 
 ## 🚀 Lancement du site
 
@@ -60,7 +60,7 @@ site-cabinet-mesnil/
 ├── index.html                      # Page d'accueil
 ├── pages/
 │   ├── services.html              # Page des services infirmiers
-│   ├── cabinet.html               # Présentation du cabinet et du label Qual'Idel
+│   ├── cabinet.html               # Présentation du cabinet
 │   ├── contact.html               # Page de contact avec formulaire
 │   └── mentions-legales.html      # Mentions légales
 ├── assets/
@@ -117,7 +117,7 @@ site-cabinet-mesnil/
 
 #### Dans `index.html` et toutes les pages :
 - **Téléphone** : Remplacer `02 35 23 42 19` et `tel:0235234219`
-- **Adresse** : Modifier `61 route Paris, 76240 Le Mesnil-Esnard`
+- **Adresse** : Modifier `61 route de Paris, 76240 Le Mesnil-Esnard`
 
 #### Dans `pages/mentions-legales.html` :
 Compléter les placeholders suivants :
@@ -265,9 +265,9 @@ Le site est optimisé pour :
 
 ## 📞 Coordonnées du cabinet
 
-**Cabinet Infirmier Qual'Idel**
+**Cabinet d'Infirmières Libérales**
 Delphine Bouqueret & Anne Charlotte Burel
-61 route Paris
+61 route de Paris
 76240 Le Mesnil-Esnard
 Téléphone : 02 35 23 42 19
 Horaires : 7j/7, 6h-20h
@@ -275,7 +275,7 @@ Zones d'intervention : Le Mesnil-Esnard, Bonsecours, Franqueville-Saint-Pierre, 
 
 ## 📄 Licence
 
-© 2024 Cabinet Infirmier Qual'Idel - Delphine Bouqueret & Anne Charlotte Burel. Tous droits réservés.
+© 2024 Cabinet d'Infirmières Libérales - Delphine Bouqueret & Anne Charlotte Burel. Tous droits réservés.
 
 ---
 
