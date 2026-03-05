@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   initAnimations();
   highlightActiveNav();
+  initPhoneModal();
 });
 
 // ============================================
@@ -200,8 +201,8 @@ function highlightActiveNav() {
 
     // Comparer les chemins
     if (currentPath === linkPath ||
-        (currentPath === '/' && linkPath.includes('index.html')) ||
-        (currentPath.includes('index.html') && linkPath === '/')) {
+      (currentPath === '/' && linkPath.includes('index.html')) ||
+      (currentPath.includes('index.html') && linkPath === '/')) {
       link.classList.add('active');
     } else {
       link.classList.remove('active');
@@ -261,10 +262,10 @@ document.querySelectorAll('.phone-number').forEach(el => {
 // Fonction pour débouncer les événements
 function debounce(func, wait = 20, immediate = true) {
   let timeout;
-  return function() {
+  return function () {
     const context = this;
     const args = arguments;
-    const later = function() {
+    const later = function () {
       timeout = null;
       if (!immediate) func.apply(context, args);
     };
@@ -313,6 +314,84 @@ function initDarkMode() {
 // Initialiser le mode sombre si le toggle existe
 if (document.querySelector('.dark-mode-toggle')) {
   initDarkMode();
+}
+
+// ============================================
+// MODAL TÉLÉPHONE (DESKTOP)
+// ============================================
+
+function initPhoneModal() {
+  const modalHTML = `
+    <div id="phone-modal" class="modal-overlay">
+      <div class="modal-content text-center">
+        <button class="modal-close" aria-label="Fermer">×</button>
+        <div class="modal-icon">📞</div>
+        <h3 class="modal-title">Pour nous joindre</h3>
+        <p class="modal-text mb-2">Composez le :</p>
+        <div class="modal-number mb-3">02 35 23 42 19</div>
+        <button id="copy-phone-btn" class="btn btn-primary">
+          <span class="btn-icon">📋</span> Copier le numéro
+        </button>
+      </div>
+    </div>
+  `;
+  document.body.insertAdjacentHTML('beforeend', modalHTML);
+
+  const phoneModal = document.getElementById('phone-modal');
+  const closeModalBtn = phoneModal.querySelector('.modal-close');
+  const copyBtn = document.getElementById('copy-phone-btn');
+  const phoneNumber = '02 35 23 42 19';
+
+  // Sur ordinateur (largeur > 768px), on intercepte tous les clics sur un lien "tel:"
+  document.body.addEventListener('click', (e) => {
+    const link = e.target.closest('a[href^="tel:"]');
+    if (link) {
+      if (window.innerWidth > 768) {
+        e.preventDefault(); // Bloque l'ouverture de xdg-open / skype
+        e.stopPropagation();
+        phoneModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+  });
+
+  const closeModal = () => {
+    phoneModal.classList.remove('active');
+    document.body.style.overflow = '';
+    // On remet le texte du bouton à son état initial après la fermeture
+    setTimeout(() => {
+      copyBtn.innerHTML = '<span class="btn-icon">📋</span> Copier le numéro';
+    }, 300);
+  };
+
+  closeModalBtn.addEventListener('click', closeModal);
+
+  phoneModal.addEventListener('click', (e) => {
+    if (e.target === phoneModal) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && phoneModal.classList.contains('active')) {
+      closeModal();
+    }
+  });
+
+  // Copie dans le presse-papiers
+  copyBtn.addEventListener('click', () => {
+    navigator.clipboard.writeText(phoneNumber.replace(/\s+/g, '')).then(() => {
+      copyBtn.innerHTML = '<span class="btn-icon">✅</span> Copié !';
+      setTimeout(() => {
+        if (phoneModal.classList.contains('active')) {
+          copyBtn.innerHTML = '<span class="btn-icon">📋</span> Copier le numéro';
+        }
+      }, 2000);
+    }).catch(err => {
+      console.error('Erreur lors de la copie :', err);
+      copyBtn.innerHTML = '<span class="btn-icon">❌</span> Erreur';
+    });
+  });
 }
 
 // ============================================

@@ -19,7 +19,8 @@
   <meta property="og:image" content="https://www.votre-site.fr/assets/images/portrait-infirmieres.jpg">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚕️</text></svg>">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -74,9 +75,12 @@
   <header class="header">
     <div class="header-container">
       <div class="header-logo">
-        <div>
-          <div class="logo-text">Cabinet Infirmier</div>
-          <div class="logo-subtitle">Bouqueret & Burel</div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <span style="font-size: 2rem;">⚕️</span>
+          <div>
+            <div class="logo-text">Cabinet Infirmier</div>
+            <div class="logo-subtitle">Bouqueret & Burel</div>
+          </div>
         </div>
       </div>
 
@@ -107,6 +111,11 @@
             <strong>Delphine Bouqueret</strong> et <strong>Anne Charlotte Burel</strong> vous accompagnent pour tous
             types de soins. À domicile au Mesnil-Esnard et ses alentours, ou au cabinet sur rendez-vous, 7j/7.
           </p>
+          <div
+            style="margin-top: var(--spacing-md); margin-bottom: var(--spacing-lg); display: flex; align-items: center; gap: 8px; font-size: var(--font-size-md); font-weight: var(--font-weight-medium); color: var(--color-primary);">
+            <span>📍</span>
+            <span>61 route de Paris, 76240 Le Mesnil-Esnard</span>
+          </div>
           <div class="hero-cta">
             <a href="tel:0235234219" class="btn btn-primary btn-large">
               <span class="btn-icon">📞</span>
@@ -226,64 +235,7 @@
     </div>
   </section>
 
-  <!-- SECTION QUAL'IDEL -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Le label Qual'Idel</h2>
-        <p class="section-subtitle">
-          Un gage de qualité et de professionnalisme
-        </p>
-      </div>
 
-      <div style="max-width: 900px; margin: 0 auto;">
-        <div class="card"
-          style="background: linear-gradient(135deg, rgba(27, 122, 153, 0.05) 0%, rgba(233, 30, 140, 0.05) 100%);">
-          <div style="text-align: center; margin-bottom: var(--spacing-xl);">
-            <div style="font-size: 4rem; margin-bottom: var(--spacing-lg);">🏆</div>
-            <h3 style="font-size: var(--font-size-2xl); color: var(--color-primary); margin-bottom: var(--spacing-md);">
-              Un cabinet labellisé qualité
-            </h3>
-          </div>
-
-          <p
-            style="font-size: var(--font-size-lg); line-height: var(--line-height-relaxed); margin-bottom: var(--spacing-lg);">
-            <strong>Qual'Idel</strong> est une démarche qualité structurée qui s'applique aux infirmières libérales.
-            Ce label garantit le respect d'une charte qualité stricte et témoigne de notre engagement pour l'excellence
-            des soins.
-          </p>
-
-          <div
-            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-lg); margin-top: var(--spacing-xl);">
-            <div style="text-align: center;">
-              <div style="font-size: var(--font-size-2xl); margin-bottom: var(--spacing-sm);">✓</div>
-              <strong>Qualité garantie</strong>
-              <p
-                style="color: var(--color-text-secondary); font-size: var(--font-size-sm); margin-top: var(--spacing-xs);">
-                Protocoles rigoureux
-              </p>
-            </div>
-            <div style="text-align: center;">
-              <div style="font-size: var(--font-size-2xl); margin-bottom: var(--spacing-sm);">✓</div>
-              <strong>Formation continue</strong>
-              <p
-                style="color: var(--color-text-secondary); font-size: var(--font-size-sm); margin-top: var(--spacing-xs);">
-                Mise à jour des compétences
-              </p>
-            </div>
-            <div style="text-align: center;">
-              <div style="font-size: var(--font-size-2xl); margin-bottom: var(--spacing-sm);">✓</div>
-              <strong>Sécurité des soins</strong>
-              <p
-                style="color: var(--color-text-secondary); font-size: var(--font-size-sm); margin-top: var(--spacing-xs);">
-                Respect des normes
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- SECTION TÉMOIGNAGES -->
   <section class="section section-gray">
@@ -412,12 +364,71 @@
     </div>
   </section>
 
+  <!-- SECTION QUAL'IDEL -->
+  <section class="section section-gray">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Le label Qual'Idel</h2>
+        <p class="section-subtitle">
+          Un gage de qualité et de professionnalisme
+        </p>
+      </div>
+
+      <div style="max-width: 900px; margin: 0 auto;">
+        <div class="card"
+          style="background: linear-gradient(135deg, rgba(27, 122, 153, 0.05) 0%, rgba(233, 30, 140, 0.05) 100%);">
+          <div style="text-align: center; margin-bottom: var(--spacing-xl);">
+            <div style="font-size: 4rem; margin-bottom: var(--spacing-lg);">🏆</div>
+            <h3 style="font-size: var(--font-size-2xl); color: var(--color-primary); margin-bottom: var(--spacing-md);">
+              Un cabinet labellisé qualité
+            </h3>
+          </div>
+
+          <p
+            style="font-size: var(--font-size-lg); line-height: var(--line-height-relaxed); margin-bottom: var(--spacing-lg);">
+            <strong>Qual'Idel</strong> est une démarche qualité structurée qui s'applique aux infirmières libérales.
+            Ce label garantit le respect d'une charte qualité stricte et témoigne de notre engagement pour l'excellence
+            des soins.
+          </p>
+
+          <div
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-lg); margin-top: var(--spacing-xl);">
+            <div style="text-align: center;">
+              <div style="font-size: var(--font-size-2xl); margin-bottom: var(--spacing-sm);">✓</div>
+              <strong>Qualité garantie</strong>
+              <p
+                style="color: var(--color-text-secondary); font-size: var(--font-size-sm); margin-top: var(--spacing-xs);">
+                Protocoles rigoureux
+              </p>
+            </div>
+            <div style="text-align: center;">
+              <div style="font-size: var(--font-size-2xl); margin-bottom: var(--spacing-sm);">✓</div>
+              <strong>Formation continue</strong>
+              <p
+                style="color: var(--color-text-secondary); font-size: var(--font-size-sm); margin-top: var(--spacing-xs);">
+                Mise à jour des compétences
+              </p>
+            </div>
+            <div style="text-align: center;">
+              <div style="font-size: var(--font-size-2xl); margin-bottom: var(--spacing-sm);">✓</div>
+              <strong>Sécurité des soins</strong>
+              <p
+                style="color: var(--color-text-secondary); font-size: var(--font-size-sm); margin-top: var(--spacing-xs);">
+                Respect des normes
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
         <div class="footer-section">
-          <h3>Cabinet Qual'Idel</h3>
+          <h3>Cabinet Infirmier</h3>
           <p>
             Infirmières libérales diplômées d'État<br>
             Delphine Bouqueret & Anne Charlotte Burel<br>
