@@ -102,8 +102,6 @@ function initFormValidation(form) {
 
   // Validation à la soumission
   form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
     let isValid = true;
 
     // Valider tous les champs
@@ -113,15 +111,15 @@ function initFormValidation(form) {
       }
     });
 
-    if (isValid) {
-      submitForm(form);
-    } else {
+    if (!isValid) {
+      e.preventDefault(); // On bloque l'envoi uniquement si le formulaire est invalide
       // Scroller vers le premier champ en erreur
       const firstError = form.querySelector('.form-group.error');
       if (firstError) {
         firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
     }
+    // Si isValid est true, on laisse le navigateur poursuivre l'action native vers Formspree
   });
 }
 
@@ -186,63 +184,6 @@ function validateField(field) {
   }
 
   return isValid;
-}
-
-// ============================================
-// SOUMISSION DU FORMULAIRE
-// ============================================
-
-function submitForm(form) {
-  const submitBtn = form.querySelector('button[type="submit"]');
-  const originalBtnText = submitBtn.textContent;
-
-  // Désactiver le bouton pendant l'envoi
-  submitBtn.disabled = true;
-  submitBtn.textContent = 'Envoi en cours...';
-
-  // Récupérer les données du formulaire
-  const formData = new FormData(form);
-  const data = Object.fromEntries(formData);
-
-  // Simuler l'envoi (car pas de backend)
-  setTimeout(() => {
-    console.log('Données du formulaire:', data);
-
-    // Afficher le message de succès
-    showSuccessMessage(form);
-
-    // Réinitialiser le formulaire
-    form.reset();
-
-    // Réactiver le bouton
-    submitBtn.disabled = false;
-    submitBtn.textContent = originalBtnText;
-
-    // Supprimer les classes de validation
-    form.querySelectorAll('.form-group').forEach(group => {
-      group.classList.remove('error', 'valid');
-    });
-  }, 1500);
-
-  // TODO: Implémenter l'envoi réel vers un backend
-  // fetch('/api/contact', {
-  //   method: 'POST',
-  //   headers: { 'Content-Type': 'application/json' },
-  //   body: JSON.stringify(data)
-  // })
-  // .then(response => response.json())
-  // .then(data => {
-  //   showSuccessMessage(form);
-  //   form.reset();
-  // })
-  // .catch(error => {
-  //   showErrorMessage(form, 'Une erreur est survenue. Veuillez réessayer.');
-  //   console.error('Erreur:', error);
-  // })
-  // .finally(() => {
-  //   submitBtn.disabled = false;
-  //   submitBtn.textContent = originalBtnText;
-  // });
 }
 
 // ============================================
