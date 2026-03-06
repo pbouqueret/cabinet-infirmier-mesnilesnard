@@ -1,0 +1,3 @@
+- Relier le formulaire de contact à un système d'envoi d'e-mails.
+- Accéder a la page google business
+-Acheter nom de domaine 
