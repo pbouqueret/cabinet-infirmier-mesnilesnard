@@ -87,7 +87,7 @@
       <nav class="nav">
         <ul class="nav-menu">
           <li><a href="index.html" class="nav-link active">Accueil</a></li>
-          <li><a href="pages/services.html" class="nav-link">Services</a></li>
+
           <li><a href="pages/cabinet.html" class="nav-link">Le Cabinet</a></li>
           <li><a href="pages/contact.html" class="nav-link">Contact</a></li>
         </ul>
@@ -102,14 +102,19 @@
   </header>
 
   <!-- HERO SECTION -->
-  <section class="hero">
+  <section class="hero"
+    style="min-height: auto; padding-top: calc(var(--header-height) + var(--spacing-3xl)); padding-bottom: var(--spacing-3xl);">
     <div class="container">
-      <div class="hero-content">
+      <div style="text-align: center; margin-bottom: var(--spacing-2xl);">
+        <h1 style="margin-bottom: 0; color: var(--color-neutral-dark); animation: slideInLeft 0.8s ease-out;">Cabinet
+          d'infirmières libérales au Mesnil-Esnard</h1>
+      </div>
+      <div class="hero-content" style="align-items: flex-start;">
         <div class="hero-text">
-          <h1>Cabinet d'Infirmières Libérales à domicile au Mesnil-Esnard</h1>
           <p class="hero-subtitle">
             <strong>Delphine Bouqueret</strong> et <strong>Anne Charlotte Burel</strong> vous accompagnent pour tous
-            types de soins. À domicile au Mesnil-Esnard et ses alentours, ou au cabinet sur rendez-vous, 7j/7.
+            types de soins. À domicile au Mesnil-Esnard et ses alentours (Belbeuf, Bonsecours,
+            Franqueville-saint-Pierre...) ou au cabinet sur rendez-vous, 7j/7.
           </p>
           <div
             style="margin-top: var(--spacing-md); margin-bottom: var(--spacing-lg); display: flex; align-items: center; gap: 8px; font-size: var(--font-size-md); font-weight: var(--font-weight-medium); color: var(--color-primary);">
@@ -143,7 +148,7 @@
       <div class="section-header">
         <h2 class="section-title">Delphine Bouqueret & Anne Charlotte Burel</h2>
         <p class="section-subtitle">
-          Vos infirmières libérales dévouées à votre bien-être
+          Vos infirmières libérales dévouées à votre santé et votre bien-être
         </p>
       </div>
 
@@ -155,7 +160,7 @@
         </p>
         <p
           style="font-size: var(--font-size-lg); line-height: var(--line-height-relaxed); color: var(--color-text-secondary);">
-          Nous réalisons tous types de soins médicalement prescrits, que ce soit à notre cabinet sur rendez-vous ou
+          Nous réalisons tous types de soins, que ce soit à notre cabinet sur rendez-vous ou
           directement à votre domicile.
           Notre objectif : vous accompagner avec professionnalisme, humanité et bienveillance dans votre parcours de
           soins.
@@ -171,7 +176,7 @@
   <section class="section section-gray">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Nos services</h2>
+        <h2 class="section-title">Nos soins</h2>
         <p class="section-subtitle">
           Des soins infirmiers complets, au cabinet ou à votre domicile
         </p>
@@ -180,58 +185,67 @@
       <div class="card-grid">
         <div class="card">
           <div class="card-icon">💉</div>
-          <h3 class="card-title">Injections & Perfusions</h3>
-          <p class="card-text">
-            Injections sous-cutanées, intramusculaires, intraveineuses. Perfusions et prélèvements sanguins.
-          </p>
+          <h3 class="card-title">Injections & Perfusions<br>Prélèvements sanguins</h3>
+          <ul class="card-text" style="list-style-type: disc; padding-left: var(--spacing-lg); margin-top: 0;">
+            <li>Injections sous-cutanées</li>
+            <li>Injections intramusculaires</li>
+            <li>Injections intraveineuses</li>
+            <li>Perfusions</li>
+            <li>Saignées thérapeutiques</li>
+          </ul>
         </div>
 
         <div class="card">
           <div class="card-icon">🩹</div>
           <h3 class="card-title">Pansements</h3>
-          <p class="card-text">
-            Pansements simples et complexes, soins post-opératoires, escarres, ulcères.
-          </p>
+          <ul class="card-text" style="list-style-type: disc; padding-left: var(--spacing-lg); margin-top: 0;">
+            <li>Pansements simples et complexes</li>
+            <li>Soins post-opératoires</li>
+            <li>Escarres, ulcères</li>
+            <li>Ablations fils et agrafes</li>
+            <li>Soins de stomies</li>
+          </ul>
         </div>
 
         <div class="card">
           <div class="card-icon">🏥</div>
           <h3 class="card-title">Soins post-opératoires</h3>
-          <p class="card-text">
-            Surveillance et soins après intervention chirurgicale, suivi de cicatrisation.
-          </p>
+          <ul class="card-text" style="list-style-type: disc; padding-left: var(--spacing-lg); margin-top: 0;">
+            <li>Surveillance et soins après intervention chirurgicale</li>
+            <li>Suivi de cicatrisation</li>
+          </ul>
         </div>
 
         <div class="card">
           <div class="card-icon">🤲</div>
           <h3 class="card-title">Soins palliatifs</h3>
-          <p class="card-text">
-            Accompagnement en fin de vie avec humanité, confort et dignité.
-          </p>
+          <ul class="card-text" style="list-style-type: disc; padding-left: var(--spacing-lg); margin-top: 0;">
+            <li>Accompagnement en fin de vie avec humanité, confort et dignité</li>
+            <li>Collaboration avec les HAD et l'équipe de soins palliatifs du CHU de Rouen</li>
+          </ul>
         </div>
 
         <div class="card">
           <div class="card-icon">🩺</div>
           <h3 class="card-title">Patients chroniques</h3>
-          <p class="card-text">
-            Suivi et accompagnement des patients diabétiques, cancers, distribution et surveillance des traitements.
-          </p>
+          <ul class="card-text" style="list-style-type: disc; padding-left: var(--spacing-lg); margin-top: 0;">
+            <li>Suivi et accompagnement des patients diabétiques et cancers</li>
+            <li>Distribution et surveillance des traitements</li>
+          </ul>
         </div>
 
         <div class="card">
-          <div class="card-icon">💉</div>
-          <h3 class="card-title">Saignées</h3>
-          <p class="card-text">
-            Réalisation de saignées thérapeutiques sur prescription médicale.
-          </p>
+          <div class="card-icon">🚨</div>
+          <h3 class="card-title">Préventions</h3>
+          <ul class="card-text" style="list-style-type: disc; padding-left: var(--spacing-lg); margin-top: 0;">
+            <li>Vaccin avec ou sans prescription</li>
+            <li>Bilan de prévention</li>
+            <li>Bilan de soins infirmiers</li>
+          </ul>
         </div>
       </div>
 
-      <div style="text-align: center; margin-top: var(--spacing-2xl);">
-        <a href="pages/services.html" class="btn btn-primary">
-          Voir tous nos services
-        </a>
-      </div>
+
     </div>
   </section>
 
@@ -325,7 +339,7 @@
           <h3 class="info-title">Horaires</h3>
           <p class="info-text">
             Lundi - Dimanche<br>
-            6h-20h30<br>
+            6h - 20h30<br>
             7 jours sur 7
           </p>
           <p class="info-text"
@@ -441,7 +455,7 @@
           <h3>Liens rapides</h3>
           <ul class="footer-links">
             <li><a href="index.html">Accueil</a></li>
-            <li><a href="pages/services.html">Services</a></li>
+
             <li><a href="pages/cabinet.html">Le Cabinet</a></li>
             <li><a href="pages/contact.html">Contact</a></li>
             <li><a href="pages/mentions-legales.html">Mentions légales</a></li>
@@ -452,7 +466,7 @@
           <h3>Horaires</h3>
           <p>
             Lundi - Dimanche<br>
-            6h-20h30<br>
+            6h - 20h30<br>
             7 jours sur 7
           </p>
         </div>
