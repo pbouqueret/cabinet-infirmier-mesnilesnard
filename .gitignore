@@ -31,3 +31,6 @@ yarn-error.log*
 logs/
 
 # Ressources essentielles (HTML, CSS, JS, images) sont par défaut INCLUSES.
+
+# Fichiers de notes personnels
+notes.md
