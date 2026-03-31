@@ -163,6 +163,10 @@
     width: 45px;
     height: 45px;
   }
+  
+  .mobile-only {
+    display: inline-flex !important;
+  }
 }
 
 /* === MOBILE (640px et moins) === */
