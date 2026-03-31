@@ -336,9 +336,9 @@ a:hover {
 }
 
 .hero-text h1 {
-  font-size: var(--font-size-2xl);
+  font-size: var(--font-size-3xl);
   margin-bottom: var(--spacing-sm);
-  color: var(--color-black);
+  color: var(--color-neutral-dark);
   animation: fadeInDown 0.8s ease-out;
 }
 
@@ -382,8 +382,8 @@ a:hover {
 }
 
 .hero-subtitle {
-  font-size: var(--font-size-base);
-  color: var(--color-black);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
   margin-bottom: var(--spacing-lg);
   line-height: var(--line-height-relaxed);
   max-width: 800px;
