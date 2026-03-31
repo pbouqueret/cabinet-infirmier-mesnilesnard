@@ -328,11 +328,18 @@ a:hover {
   z-index: 1;
 }
 
+.hero-text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .hero-text h1 {
   font-size: var(--font-size-4xl);
   margin-bottom: var(--spacing-lg);
   color: var(--color-neutral-dark);
-  animation: slideInLeft 0.8s ease-out;
+  animation: fadeInDown 0.8s ease-out;
 }
 
 .hero-text .highlight {
@@ -352,7 +359,7 @@ a:hover {
   height: 3px;
   background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
   transform: scaleX(0);
-  transform-origin: left;
+  transform-origin: center;
   animation: underline 1s ease-out 0.5s forwards;
 }
 
@@ -385,6 +392,7 @@ a:hover {
   display: flex;
   gap: var(--spacing-lg);
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .hero-image {
