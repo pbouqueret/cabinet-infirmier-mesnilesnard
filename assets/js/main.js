@@ -338,6 +338,9 @@ function initPhoneModal() {
   document.body.insertAdjacentHTML('beforeend', modalHTML);
 
   const modalDisplay = document.getElementById('modal-phone-display');
+  const phoneModal = document.getElementById('phone-modal');
+  const closeModalBtn = phoneModal.querySelector('.modal-close');
+  const copyBtn = document.getElementById('copy-phone-btn');
   let currentNumberToCopy = '';
 
   // Sur ordinateur (largeur > 768px), on intercepte tous les clics sur un lien "tel:"
@@ -354,8 +357,9 @@ function initPhoneModal() {
         // Formater joliment pour l'affichage (ex: +33235234219 -> 02 35 23 42 19)
         let displayStr = rawNumber;
         if (rawNumber.startsWith('+33')) {
-          const mainPart = rawNumber.substring(3);
-          displayStr = '0' + mainPart.match(/.{1,2}/g).join(' ');
+          const mainPart = rawNumber.substring(3); // Les 9 chiffres après +33
+          // On ajoute le 0 et on espace 2 par 2
+          displayStr = '0' + mainPart.replace(/(\d{1})(\d{2})(\d{2})(\d{2})(\d{2})/, '$1 $2 $3 $4 $5');
         }
         
         modalDisplay.textContent = displayStr;
