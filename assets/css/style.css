@@ -382,9 +382,9 @@ a:hover {
 }
 
 .hero-subtitle {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-lg);
   color: var(--color-text-secondary);
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
   line-height: var(--line-height-relaxed);
   max-width: 800px;
 }
