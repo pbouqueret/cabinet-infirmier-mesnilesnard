@@ -328,7 +328,7 @@ function initPhoneModal() {
         <div class="modal-icon">📞</div>
         <h3 class="modal-title">Pour nous joindre</h3>
         <p class="modal-text mb-2">Composez le :</p>
-        <div class="modal-number mb-3">02 35 23 42 19</div>
+        <div id="modal-phone-display" class="modal-number mb-3">02 35 23 42 19</div>
         <button id="copy-phone-btn" class="btn btn-primary">
           <span class="btn-icon">📋</span> Copier le numéro
         </button>
@@ -337,10 +337,8 @@ function initPhoneModal() {
   `;
   document.body.insertAdjacentHTML('beforeend', modalHTML);
 
-  const phoneModal = document.getElementById('phone-modal');
-  const closeModalBtn = phoneModal.querySelector('.modal-close');
-  const copyBtn = document.getElementById('copy-phone-btn');
-  const phoneNumber = '02 35 23 42 19';
+  const modalDisplay = document.getElementById('modal-phone-display');
+  let currentNumberToCopy = '';
 
   // Sur ordinateur (largeur > 768px), on intercepte tous les clics sur un lien "tel:"
   document.body.addEventListener('click', (e) => {
@@ -349,6 +347,20 @@ function initPhoneModal() {
       if (window.innerWidth > 768) {
         e.preventDefault(); // Bloque l'ouverture de xdg-open / skype
         e.stopPropagation();
+        
+        // Extraire le numéro pour l'affichage et la copie
+        const rawNumber = link.getAttribute('href').replace('tel:', '');
+        
+        // Formater joliment pour l'affichage (ex: +33235234219 -> 02 35 23 42 19)
+        let displayStr = rawNumber;
+        if (rawNumber.startsWith('+33')) {
+          const mainPart = rawNumber.substring(3);
+          displayStr = '0' + mainPart.match(/.{1,2}/g).join(' ');
+        }
+        
+        modalDisplay.textContent = displayStr;
+        currentNumberToCopy = displayStr.replace(/\s+/g, '');
+        
         phoneModal.classList.add('active');
         document.body.style.overflow = 'hidden';
       }
@@ -380,7 +392,7 @@ function initPhoneModal() {
 
   // Copie dans le presse-papiers
   copyBtn.addEventListener('click', () => {
-    navigator.clipboard.writeText(phoneNumber.replace(/\s+/g, '')).then(() => {
+    navigator.clipboard.writeText(currentNumberToCopy).then(() => {
       copyBtn.innerHTML = '<span class="btn-icon">✅</span> Copié !';
       setTimeout(() => {
         if (phoneModal.classList.contains('active')) {
