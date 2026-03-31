@@ -336,10 +336,11 @@ a:hover {
 }
 
 .hero-text h1 {
-  font-size: var(--font-size-4xl);
-  margin-bottom: var(--spacing-lg);
-  color: var(--color-neutral-dark);
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-white);
   animation: fadeInDown 0.8s ease-out;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .hero-text .highlight {
@@ -382,10 +383,11 @@ a:hover {
 }
 
 .hero-subtitle {
-  font-size: var(--font-size-xl);
-  color: var(--color-text-secondary);
-  margin-bottom: var(--spacing-2xl);
+  font-size: var(--font-size-md);
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: var(--spacing-xl);
   line-height: var(--line-height-relaxed);
+  max-width: 800px;
 }
 
 .hero-cta {
